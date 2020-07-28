@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import "_mixins.scss";
+$font-name: "Poppins", sans-serif;
+$max: 12;
+$gutterWidth: 30px;
+
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+figure {
+  position: relative;
+}
+.side-name {
+  position: absolute;
+  transform: rotate(-90deg);
+  transform-origin: left;
+  bottom: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+  font-family: $font-name;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+}
+figure img {
+  max-width: 100%;
+}
+.team-detail {
+  position: relative;
+}
+
+.team-content {
+  position: absolute;
+  left: 60px;
+  bottom: 30px;
+}
+.icons {
+  display: block;
+}
+.fa.fa-facebook {
+  font-size: 33px;
+}
+.team-name {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: $font-name;
+  color: white;
+}
+.team-title {
+  margin: 0;
+  text-align: left;
+  font-family: $font-name;
+  letter-spacing: -0.05em;
+  color: white;
+}
+@for $i from 1 through $max {
+  .col-sm-#{$i} {
+    @include breakpoint(sm) {
+      $width: 100%/12;
+      padding: 0 #{$gutterWidth / 2};
+      flex-basis: $width * $i;
+      max-width: $width * $i;
+      text-align: center;
+    }
+  }
+}
+
+@for $i from 1 through $max {
+  .col-md-#{$i} {
+    @include breakpoint(md) {
+      $width: 100%/12;
+      padding: 0 #{$gutterWidth / 2};
+      flex-basis: $width * $i;
+      max-width: $width * $i;
+      text-align: center;
+    }
+  }
+}
+
+@for $i from 1 through $max {
+  .col-lg-#{$i} {
+    @include breakpoint(lg) {
+      $width: 100%/12;
+      flex-basis: $width * $i;
+      max-width: $width * $i;
+      padding: 0 #{$gutterWidth / 2};
+      text-align: center;
+    }
+  }
+}
