@@ -43,6 +43,22 @@ figure img {
   position: relative;
 }
 
+.team-detail:hover > figure::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(225deg, #f42958, #e3432a);
+  opacity: 0.9;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
+}
+
 .team-content {
   position: absolute;
   left: 60px;
@@ -56,18 +72,13 @@ figure img {
   -webkit-transition-duration: 0.9s;
           transition-duration: 0.9s;
   visibility: visible;
-}
-
-.team-detail:hover > figure {
-  opacity: 0.3;
-  -webkit-transition-duration: 0.9s;
-          transition-duration: 0.9s;
+  z-index: 1;
 }
 
 .team-detail:hover .side-name {
   visibility: hidden;
-  -webkit-transition-duration: 0.3s ease;
-          transition-duration: 0.3s ease;
+  -webkit-transition-duration: 0.9s ease;
+          transition-duration: 0.9s ease;
 }
 
 .icons {
@@ -88,6 +99,7 @@ figure img {
 .fa.fa-instagram {
   font-size: 20px;
   margin-right: 10px;
+  color: white;
 }
 
 .team-name {
