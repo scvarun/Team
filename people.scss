@@ -31,7 +31,7 @@ figure {
   letter-spacing: 0.2em;
   transition-property: opacity, bottom;
   transition-duration: 0.9s;
-  transition-timing-function: ease-in;
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 }
 figure img {
   width: 100%;
@@ -98,7 +98,7 @@ figure::after {
 }
 .team-detail:hover > .team-content {
   opacity: 0;
-  transition-duration: 0.5s;
+  transition-duration: 0.9s;
   visibility: visible;
   z-index: 1;
 }

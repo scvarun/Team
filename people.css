@@ -38,8 +38,8 @@ figure {
   transition-property: opacity, bottom;
   -webkit-transition-duration: 0.9s;
           transition-duration: 0.9s;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+          transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 figure img {
@@ -124,8 +124,8 @@ figure::after {
 
 .team-detail:hover > .team-content {
   opacity: 0;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
   visibility: visible;
   z-index: 1;
 }
