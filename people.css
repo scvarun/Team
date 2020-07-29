@@ -43,11 +43,11 @@ figure img {
   position: relative;
 }
 
-.team-detail:hover > figure::after {
+figure::after {
   content: "";
   position: absolute;
   background: linear-gradient(225deg, #f42958, #e3432a);
-  opacity: 0.9;
+  opacity: 0;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -57,6 +57,10 @@ figure img {
   width: 100%;
   -webkit-transition-duration: 0.9s;
           transition-duration: 0.9s;
+}
+
+.team-detail:hover > figure::after {
+  opacity: 0.9;
 }
 
 .team-content {

@@ -35,11 +35,11 @@ figure img {
 .team-detail {
   position: relative;
 }
-.team-detail:hover > figure::after {
+figure::after {
   content: "";
   position: absolute;
   background: linear-gradient(225deg, #f42958, #e3432a);
-  opacity: 0.9;
+  opacity: 0;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -48,6 +48,9 @@ figure img {
   height: 100%;
   width: 100%;
   transition-duration: 0.9s;
+}
+.team-detail:hover > figure::after {
+  opacity: 0.9;
 }
 .team-content {
   position: absolute;
