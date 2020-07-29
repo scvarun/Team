@@ -34,6 +34,12 @@ figure {
   font-family: "Poppins", sans-serif;
   font-size: 0.75rem;
   letter-spacing: 0.2em;
+  -webkit-transition-property: opacity, bottom;
+  transition-property: opacity, bottom;
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
 }
 
 figure img {
@@ -84,7 +90,6 @@ figure::after {
 }
 
 .icons {
-  display: block;
   position: absolute;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -92,6 +97,7 @@ figure::after {
 }
 
 .icons > li {
+  display: block;
   list-style-type: none;
 }
 
@@ -117,17 +123,16 @@ figure::after {
 }
 
 .team-detail:hover > .team-content {
-  opacity: 1;
-  -webkit-transition-duration: 0.9s;
-          transition-duration: 0.9s;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   visibility: visible;
   z-index: 1;
 }
 
 .team-detail:hover .side-name {
-  visibility: hidden;
-  -webkit-transition-duration: 0.9s ease;
-          transition-duration: 0.9s ease;
+  opacity: 0;
+  bottom: 30px;
 }
 
 @media (min-width: 0) {
