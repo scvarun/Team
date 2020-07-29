@@ -73,10 +73,10 @@ figure::after {
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 }
 .icons {
-  left: 0px;
-  position: absolute;
   display: flex;
   flex: 1;
+  padding: 0;
+  margin: 0;
 }
 .icons > li {
   display: block;
@@ -91,25 +91,19 @@ figure::after {
 }
 
 .team-name {
-  position: absolute;
   margin: 0;
   font-family: $font-name;
   font-size: 1.25rem;
   font-weight: 500;
   color: white;
-  left: 40px;
-  top: 370px;
 }
 .team-title {
-  position: absolute;
   margin: 0;
   font-family: $font-name;
   letter-spacing: -0.05em;
   color: white;
   font-size: 0.8125rem;
   font-weight: 400;
-  left: 40px;
-  top: 400px;
 }
 
 .team-detail:hover > .team-content {
@@ -130,7 +124,6 @@ figure::after {
       padding: 0 #{$gutterWidth / 2};
       flex-basis: $width * $i;
       max-width: $width * $i;
-      text-align: center;
     }
   }
 }
@@ -142,7 +135,6 @@ figure::after {
       padding: 0 #{$gutterWidth / 2};
       flex-basis: $width * $i;
       max-width: $width * $i;
-      text-align: center;
     }
   }
 }
@@ -154,7 +146,6 @@ figure::after {
       flex-basis: $width * $i;
       max-width: $width * $i;
       padding: 0 #{$gutterWidth / 2};
-      text-align: center;
     }
   }
 }
