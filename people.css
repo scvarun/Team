@@ -47,14 +47,47 @@ figure img {
   position: absolute;
   left: 60px;
   bottom: 30px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.team-detail:hover > .team-content {
+  opacity: 1;
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
+  visibility: visible;
+}
+
+.team-detail:hover > figure {
+  opacity: 0.3;
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
+}
+
+.team-detail:hover .side-name {
+  visibility: hidden;
+  -webkit-transition-duration: 0.3s ease;
+          transition-duration: 0.3s ease;
 }
 
 .icons {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: -50px;
+  bottom: 280px;
 }
 
-.fa.fa-facebook {
-  font-size: 33px;
+.icons > li {
+  list-style-type: none;
+}
+
+.fa.fa-facebook,
+.fa.fa-twitter,
+.fa.fa-instagram {
+  font-size: 20px;
+  margin-right: 10px;
 }
 
 .team-name {

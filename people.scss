@@ -40,12 +40,37 @@ figure img {
   position: absolute;
   left: 60px;
   bottom: 30px;
+  opacity: 0;
+  visibility: hidden;
 }
+.team-detail:hover > .team-content {
+  opacity: 1;
+  transition-duration: 0.9s;
+  visibility: visible;
+}
+.team-detail:hover > figure {
+  opacity: 0.3;
+  transition-duration: 0.9s;
+}
+.team-detail:hover .side-name {
+  visibility: hidden;
+  transition-duration: 0.3s ease;
+}
+
 .icons {
-  display: block;
+  display: flex;
+  position: absolute;
+  left: -50px;
+  bottom: 280px;
 }
-.fa.fa-facebook {
-  font-size: 33px;
+.icons > li {
+  list-style-type: none;
+}
+.fa.fa-facebook,
+.fa.fa-twitter,
+.fa.fa-instagram {
+  font-size: 20px;
+  margin-right: 10px;
 }
 .team-name {
   margin: 0;
